@@ -5,9 +5,41 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:gray;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.selectionContainer {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  
+}
+
+.inputContainer{
+  display:flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.buttonStyling{
+ display: flex;
+ justify-content: center;
+ margin: 20px;
+}
+
+h1{
+  margin:50px;
+  display:flex;
+  justify-content: center;
+}
+
+
+table{
+margin: 30px;
 }
