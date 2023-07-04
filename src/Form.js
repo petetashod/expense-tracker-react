@@ -1,55 +1,84 @@
 import React from 'react';
 //import App from './App';
-import { useState } from 'react';
 
-const Form = () => {
-    const [type, setTypeCurrency] = useState("");
-    const [expense, setTypeExpense] = useState("");
-    // const [date,setTypeDate] = useState("");
-    const [amount, setMoneyAmount] = useState("");
-    
-    // const handleOnClick = (e) => {
-    //     setTypeCurrency(e.target.id);
-    //     setTypeExpense(e.target.id);
-    //     // setTypeDate(e.target.value)
-    //     setMoneyAmount(e.target.id);
 
-    // };
-    // const handleChange = (e) => {
-    //     setTypeExpense(e.target.value)
+const Form = ({setTypeExpense,expense,expenses,setTypeExpenses}) => {
+   
+    const handleOnClick = () => {
+       const newExpensesArray = [
+        ...expenses
+       ];
+       newExpensesArray.push(expense);
+       setTypeExpenses(newExpensesArray);
+    };
+   
+    const handleChangeDescription = (e) => {
+        const newExpenseObject = {
+            ...expense,
+            description: e.target.value,
+        }
+        setTypeExpense(newExpenseObject); 
         
-    // };
+    };
 
-    // const handleChangeAmount = (e) => {
-    //     setMoneyAmount(e.target.value)
-    // };
+    const handleChangeAmount = (e) => {
+       const newExpenseObject = {
+            ...expense,
+            amount: e.target.value
+        }
+        setTypeExpense(newExpenseObject); 
+    };
+    const handleChangeCurrency = (e) => {
+        const newExpenseObject = {
+            ...expense,
+            currency: e.target.value,
+        }
+        setTypeExpense(newExpenseObject); 
+    };
+    const handleChangeDate = (e) => {
+        const newExpenseObject = {
+            ...expense,
+            date: e.target.value,
+        }
+        setTypeExpense(newExpenseObject); 
+    };
+    
     return (
-    <div>
-        <form>
-            <div className="selectionContainer">
-            <label htmlFor="type">Type:</label>
-                    <select>
-                        <option >Card</option>
-                        <option >Cash</option>
-                        <option >Crypto</option>
-                        <option >Other</option>
-                    </select>
-                 
-            </div>
-            <div className="inputContainer" id="expense">
-                <input type="text"  placeholder="what was the expense for?" />
-            </div>
-            <div className="inputContainer" id="amountInput">
-                <input type="text" placeholder="How Much?" />
-            </div>
-            <div className="inputContainer" id="date">
-                <input type="date"  placeholder="mm/dd/yyyy"/>
-            </div>
-        </form>
-        <span className="buttonStyling" id="button"> 
-            <button type="button"className=' btn btn-primary' >Add Expense</button>
-        </span>
-    </div>
+    <>
+        <div>
+            <form className='formContainer'>
+                <div className="form-group selectionContainer">
+                <label htmlFor="type">Type:</label>
+                        <select onChange={handleChangeCurrency} className="form-control">
+                            <option>Card</option>
+                            <option>Cash</option>
+                            <option>Crypto</option>
+                            <option>Other</option>
+                        </select>
+                    
+                </div>
+                <div className="form-group" >
+                    <input type="text"  id="expense"  placeholder="what was the expense for?" 
+                    onChange={handleChangeDescription} className="form-control"
+                    />
+                </div>
+                <div className="form-group">
+                    <input id="amountInput"type="text" placeholder="How Much?" 
+                    onChange={handleChangeAmount} className="form-control"
+                    />
+                </div>
+                <div className="form-control dateContainer" >
+                    <input id="date" type="date"  placeholder="mm/dd/yyyy" 
+                    onChange={handleChangeDate} className="form-control"/> 
+                </div>
+            </form>
+            <span className='btnContainer'> 
+                <button  type="button" className=' btn btn-primary' 
+                onClick={handleOnClick}
+                >Add Expense</button>
+            </span>
+        </div>
+    </>
     )
 };
 

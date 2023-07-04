@@ -14,32 +14,50 @@ code {
 }
 
 
-.selectionContainer {
+.formContainer{
+  display:flex;
+  justify-content: center;
+  
+
+}
+
+#amountInput, #expense{
+  margin: 30px;
+  padding: 20px;
+  width: 250px;
+  height: 35px;
+
+}
+
+
+.dateContainer{
+  margin:30px; 
+  padding: 0px;
+  width: 200px; 
+
+}
+
+
+.btnContainer {
   display: flex;
   justify-content: center;
-  margin: 10px;
-  
-}
+  margin:20px;
 
-.inputContainer{
-  display:flex;
-  justify-content: center;
-  margin: 10px;
 }
-
-.buttonStyling{
- display: flex;
- justify-content: center;
- margin: 20px;
-}
-
 h1{
-  margin:50px;
   display:flex;
   justify-content: center;
+  margin-top: 50px;
 }
 
+.selectionContainer{
+  width:100px; 
+  margin: 10px;
+  display:inline-block; 
 
-table{
-margin: 30px;
+}
+
+label{
+font-weight: bolder;
+
 }
