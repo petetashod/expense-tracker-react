@@ -39,8 +39,10 @@ const Form = ({setTypeExpense,expense,expenses,setTypeExpenses}) => {
         const newExpenseObject = {
             ...expense,
             date: e.target.value,
-        }
-        setTypeExpense(newExpenseObject); 
+        
+        };  
+        
+    setTypeExpense(newExpenseObject); 
     };
     
     return (

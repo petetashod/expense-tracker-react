@@ -3,6 +3,7 @@ import Form from './Form';
 import Table from './Table';
 
 
+
 function App(){
   const [expense, setTypeExpense] = useState({
     currency:"",
@@ -19,7 +20,7 @@ function App(){
     console.log("currency", expense.currency);
     console.log("date", expense.date);
   },[expense])
-  
+
   return(
     <div>
       <h1>Expense Tracker</h1>
@@ -32,6 +33,7 @@ function App(){
       />
       <Table
         expenses={expenses}
+    
       
       />
 

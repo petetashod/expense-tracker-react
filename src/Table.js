@@ -4,15 +4,26 @@ import  React from 'react';
 
 
 const Table = ({expenses}) =>{
+    const dateConverter = (dateFromExpenseItem) => {
+        const date = new Date(dateFromExpenseItem)
+        
+         Intl.DateTimeFormat("en-US", {
+            dateStyle: "short",
+          }).format(date);
+    }
+        
     const allExpenses = expenses.map((expenseItem,index) => {
         return (
+        
             <tr key={index}>
                 <td>{expenseItem.currency}</td>
                 <td>{expenseItem.description}</td>
                 <td>{expenseItem.amount}</td>
                 <td>{expenseItem.date}</td>
             </tr>
+            
         )
+
     })
     
     return(
