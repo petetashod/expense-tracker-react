@@ -32,6 +32,7 @@ function App(){
         setTypeExpenses={setTypeExpenses}
       />
       <Table
+        setTypeExpenses={setTypeExpenses}
         expenses={expenses}
     
       

@@ -3,23 +3,31 @@ import  React from 'react';
 //import App from './App';
 
 
-const Table = ({expenses}) =>{
+const Table = ({expenses,setTypeExpenses}) =>{
     const dateConverter = (dateFromExpenseItem) => {
         const date = new Date(dateFromExpenseItem)
         
-         Intl.DateTimeFormat("en-US", {
+        const formattedDate = Intl.DateTimeFormat("en-US", {
             dateStyle: "short",
           }).format(date);
+
+        return formattedDate
     }
         
     const allExpenses = expenses.map((expenseItem,index) => {
         return (
-        
             <tr key={index}>
                 <td>{expenseItem.currency}</td>
                 <td>{expenseItem.description}</td>
                 <td>{expenseItem.amount}</td>
-                <td>{expenseItem.date}</td>
+                <td>{dateConverter(expenseItem.date)}</td>
+                <button onClick={(e)=>{
+                    const filterData = setTypeExpenses.filter((expenseItem) => {
+                        return expenseItem.id
+                    
+                    
+                    })
+                }}>X</button>
             </tr>
             
         )

@@ -7,7 +7,9 @@ const Form = ({setTypeExpense,expense,expenses,setTypeExpenses}) => {
     const handleOnClick = () => {
        const newExpensesArray = [
         ...expenses
+         
        ];
+        Math.random(expense.id)
        newExpensesArray.push(expense);
        setTypeExpenses(newExpensesArray);
     };
