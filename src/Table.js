@@ -5,13 +5,13 @@ import  React from 'react';
 
 const Table = ({expenses,setTypeExpenses}) =>{
     const dateConverter = (dateFromExpenseItem) => {
-        const date = new Date(dateFromExpenseItem)
+        const date = new Date(dateFromExpenseItem) 
         
         const formattedDate = Intl.DateTimeFormat("en-US", {
             dateStyle: "short",
           }).format(date);
 
-        return formattedDate
+        return formattedDate;
     }
         
     const allExpenses = expenses.map((expenseItem,index) => {
@@ -21,12 +21,11 @@ const Table = ({expenses,setTypeExpenses}) =>{
                 <td>{expenseItem.description}</td>
                 <td>{expenseItem.amount}</td>
                 <td>{dateConverter(expenseItem.date)}</td>
-                <button onClick={(e)=>{
-                    const filterData = setTypeExpenses.filter((expenseItem) => {
-                        return expenseItem.id
-                    
-                    
+                <button onClick={()=>{
+                    const filterData = allExpenses.filter((id) => {
+                        return  expenseItem.id !== id;
                     })
+                    setTypeExpenses(filterData)
                 }}>X</button>
             </tr>
             
