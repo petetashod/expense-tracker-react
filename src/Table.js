@@ -3,7 +3,7 @@ import  React from 'react';
 //import App from './App';
 
 
-const Table = ({expenses,setTypeExpenses,expense}) =>{
+const Table = ({expenses,setTypeExpenses}) =>{
     const dateConverter = (dateFromExpenseItem) => {
         const month = new Date(dateFromExpenseItem).getMonth() +1;
         const day = new Date(dateFromExpenseItem).getDate() +1;
