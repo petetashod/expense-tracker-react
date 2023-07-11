@@ -18,13 +18,13 @@ const Table = ({expenses,setTypeExpenses,expense}) =>{
                 <td>{expenseItem.description}</td>
                 <td>{expenseItem.amount}</td>
                 <td>{dateConverter(expenseItem.date)}</td>
-                <button onClick={()=>{
-                    const filterData = expenses.filter((id) => {
-                        return  expenses.id !== id;
+                <td><button onClick={()=>{
+                    const filterData = expenses.filter((expense) => {
+                        return  expense.id !== expenseItem.id;
                     })
         
                     setTypeExpenses(filterData)
-                }}>X</button>
+                }}>X</button></td>
             </tr>
             
         )

@@ -20,7 +20,6 @@ const Form = ({setTypeExpense,expense,expenses,setTypeExpenses}) => {
             ...expense,
             description: e.target.value,
         }
-        Math.random(expense.id)
         setTypeExpense(newExpenseObject); 
        
     };
