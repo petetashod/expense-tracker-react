@@ -1,4 +1,5 @@
 import React from 'react';
+import {setState} from 'react';
 //import App from './App';
 
 
@@ -7,9 +8,9 @@ const Form = ({setTypeExpense,expense,expenses,setTypeExpenses}) => {
     const handleOnClick = () => {
        const newExpensesArray = [
         ...expenses
-         
-       ];
-        Math.random(expense.id)
+        
+        
+       ]
        newExpensesArray.push(expense);
        setTypeExpenses(newExpensesArray);
     };
@@ -19,8 +20,9 @@ const Form = ({setTypeExpense,expense,expenses,setTypeExpenses}) => {
             ...expense,
             description: e.target.value,
         }
+        Math.random(expense.id)
         setTypeExpense(newExpenseObject); 
-        
+       
     };
 
     const handleChangeAmount = (e) => {
@@ -28,6 +30,7 @@ const Form = ({setTypeExpense,expense,expenses,setTypeExpenses}) => {
             ...expense,
             amount: e.target.value
         }
+        
         setTypeExpense(newExpenseObject); 
     };
     const handleChangeCurrency = (e) => {
@@ -35,6 +38,7 @@ const Form = ({setTypeExpense,expense,expenses,setTypeExpenses}) => {
             ...expense,
             currency: e.target.value,
         }
+        
         setTypeExpense(newExpenseObject); 
     };
     const handleChangeDate = (e) => {

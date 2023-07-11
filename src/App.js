@@ -9,7 +9,8 @@ function App(){
     currency:"",
     description:"",
     amount:"",
-    date:""
+    date:"",
+    id: Math.floor(Math.random()) * 100
   });
  
   const [expenses, setTypeExpenses] = useState([])
@@ -34,7 +35,7 @@ function App(){
       <Table
         setTypeExpenses={setTypeExpenses}
         expenses={expenses}
-    
+        expense={expense}
       
       />
 

@@ -3,15 +3,12 @@ import  React from 'react';
 //import App from './App';
 
 
-const Table = ({expenses,setTypeExpenses}) =>{
+const Table = ({expenses,setTypeExpenses,expense}) =>{
     const dateConverter = (dateFromExpenseItem) => {
-        const date = new Date(dateFromExpenseItem) 
-        
-        const formattedDate = Intl.DateTimeFormat("en-US", {
-            dateStyle: "short",
-          }).format(date);
-
-        return formattedDate;
+        const month = new Date(dateFromExpenseItem).getMonth() +1;
+        const day = new Date(dateFromExpenseItem).getDate() +1;
+        const year = new Date(dateFromExpenseItem).getFullYear();
+        return `${month}-${day}-${year}`;
     }
         
     const allExpenses = expenses.map((expenseItem,index) => {
@@ -22,9 +19,10 @@ const Table = ({expenses,setTypeExpenses}) =>{
                 <td>{expenseItem.amount}</td>
                 <td>{dateConverter(expenseItem.date)}</td>
                 <button onClick={()=>{
-                    const filterData = allExpenses.filter((id) => {
-                        return  expenseItem.id !== id;
+                    const filterData = expenses.filter((id) => {
+                        return  expenses.id !== id;
                     })
+        
                     setTypeExpenses(filterData)
                 }}>X</button>
             </tr>
