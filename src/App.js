@@ -10,9 +10,9 @@ function App(){
     description:"",
     amount:"",
     date:"",
-    id: Math.floor(Math.random()) * 100
+    id: Math.floor(Math.random() * 1000)
   });
- 
+  
   const [expenses, setTypeExpenses] = useState([])
 
   useEffect(() => {
@@ -20,6 +20,7 @@ function App(){
     console.log("amount", expense.amount);
     console.log("currency", expense.currency);
     console.log("date", expense.date);
+    console.log("id", expense.id);
   },[expense])
 
   return(
