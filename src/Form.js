@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-//import App from './App';
+
 
 const Form = ({ setTypeExpense, expense, expenses, setTypeExpenses }) => {
   const handleOnClick = () => {
