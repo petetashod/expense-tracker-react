@@ -15,13 +15,6 @@ function App(){
   
   const [expenses, setTypeExpenses] = useState([])
 
-  useEffect(() => {
-    console.log("description", expense.description);
-    console.log("amount", expense.amount);
-    console.log("currency", expense.currency);
-    console.log("date", expense.date);
-    console.log("id", expense.id);
-  },[expense])
 
   return(
     <div>
