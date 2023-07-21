@@ -5,9 +5,9 @@ import React from "react";
 
 const Form = ({ setTypeExpense, expense, expenses, setTypeExpenses }) => {
   const handleOnClick = () => {
-    const companyOfCurrentExpense = { ...expense };
+    const copyOfCurrentExpense = { ...expense };
     const newExpensesArray = [...expenses];
-    companyOfCurrentExpense.id = Math.floor(Math.random() * 1000);
+    copyOfCurrentExpense.id = Math.floor(Math.random() * 1000);
     setTypeExpense(companyOfCurrentExpense);
     newExpensesArray.push(companyOfCurrentExpense);
     setTypeExpenses(newExpensesArray);
