@@ -8,8 +8,8 @@ const Form = ({ setTypeExpense, expense, expenses, setTypeExpenses }) => {
     const copyOfCurrentExpense = { ...expense };
     const newExpensesArray = [...expenses];
     copyOfCurrentExpense.id = Math.floor(Math.random() * 1000);
-    setTypeExpense(companyOfCurrentExpense);
-    newExpensesArray.push(companyOfCurrentExpense);
+    setTypeExpense(copyOfCurrentExpense);
+    newExpensesArray.push(copyOfCurrentExpense);
     setTypeExpenses(newExpensesArray);
   };
 
