@@ -1,63 +1,56 @@
+/** @format */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:gray;
+  background-color: gray;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-
-.formContainer{
-  display:flex;
+.formContainer {
+  display: flex;
   justify-content: center;
-  
-
 }
 
-#amountInput, #expense{
+#amountInput,
+#expense {
   margin: 30px;
   padding: 20px;
   width: 250px;
   height: 35px;
-
 }
 
-
-.dateContainer{
-  margin:30px; 
+.dateContainer {
+  margin: 30px;
   padding: 0px;
-  width: 200px; 
-
+  width: 200px;
 }
-
 
 .btnContainer {
   display: flex;
   justify-content: center;
-  margin:20px;
-
+  margin: 20px;
 }
-h1{
-  display:flex;
+h1 {
+  display: flex;
   justify-content: center;
   margin-top: 50px;
 }
 
-.selectionContainer{
-  width:100px; 
+.selectionContainer {
+  width: 100px;
   margin: 10px;
-  display:inline-block; 
-
+  display: inline-block;
 }
 
-label{
-font-weight: bolder;
-
+label {
+  font-weight: bolder;
 }
